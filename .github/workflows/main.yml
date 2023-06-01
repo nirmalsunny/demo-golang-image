@@ -6,7 +6,9 @@ on:
       - 'main'
   pull_request:
     branches: [ main ]
-    
+permissions:
+  packages: write
+  contents: read
 jobs:
   # Build the dockerfile
   Docker:
