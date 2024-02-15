@@ -10,7 +10,7 @@ WORKDIR /app
 COPY *.go go.mod ./
 
 # Build the Go binary
-RUN CGO_ENABLED=0 GOOS=linux go build -o myapp
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -o myapp
 
 # Use a minimal base image for the final container
 FROM scratch
